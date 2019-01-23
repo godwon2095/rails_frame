@@ -27,5 +27,10 @@
         toastr.info(message);
       </script> -->
     <%# end %>
+    <% if user_signed_in? %>
+      <script type="text/javascript">
+        var currentUser = <%= raw current_user.to_json(:only => [:name]) %>
+      </script>
+    <% end %>
   </body>
 </html>

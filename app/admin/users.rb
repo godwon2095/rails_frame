@@ -9,8 +9,8 @@ ActiveAdmin.register User do
     column "프로필 사진" do |user|
       if user.image?
         image_tag user.image&.url, class: "admin-indexImage"
-      # else
-      #   image_tag "default_profile.jpg", class: "admin-indexImage"
+      else
+        image_tag "default_profile.jpg", class: "admin-indexImage"
       end
     end
     # tag_column "계정 정보" do |user|
@@ -69,8 +69,8 @@ ActiveAdmin.register User do
           row :image do |uesr|
             if user.image.present?
               image_tag user.image&.url, :class => 'admin-showImage'
-            # else
-            #   image_tag "default_profile.jpg", class: "admin-showImage"
+            else
+              image_tag "default_profile.jpg", class: "admin-showImage"
             end
           end
           row :email
