@@ -6,9 +6,9 @@
 Rails Frame 사용법:
 
 bundle
-bundle exec figaro install
-(이후 application.yml 에 데이터 베이스 키 입력)
-rails g active_admin:install
-(이후 User 모델에 컬럼 추가)
+bundle exec figaro install<br/>
+(이후 application.yml 에 데이터 베이스 키 입력)<br/>
+rails g active_admin:install<br/>
+(이후 User 모델에 컬럼 추가)<br/>
 rake db:craete db:migrate db:seed
 
