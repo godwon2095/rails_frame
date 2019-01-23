@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   root 'home#index'
 
+  post '/tinymce_assets' => 'tinymce_assets#create'
+
   devise_for :users, controllers: {sessions: "users/sessions", registrations: "users/registrations", confirmations: "users/confirmations", passwords: "users/passwords", omniauth_callbacks: 'users/omniauth_callbacks'}
   devise_scope :user do
     get '/users/sign_out' => 'devise/sessions#destroy'

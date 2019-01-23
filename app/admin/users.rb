@@ -57,6 +57,7 @@ ActiveAdmin.register User do
       f.input :name
       f.input :password if f.object.new_record?
       f.input :phone
+      # f.input :content, input_html: {class: "tinymce"}
     end
     f.actions
   end
