@@ -16,9 +16,15 @@ TinyMCERails.initialize('default', {
 });
 
 $(function () {
-    var viewer = ImageViewer();
-    $('img').click(function () {
-        var imgSrc = this.src
-        viewer.show(imgSrc);
-    });
+  $.ajaxSetup({
+    headers: {
+      'X-CSRF-Token': $('meta[name="csrf-token"]').attr('content')
+    }
+  });
+
+  var viewer = ImageViewer();
+  $('img').click(function () {
+      var imgSrc = this.src
+      viewer.show(imgSrc);
+  });
 });
